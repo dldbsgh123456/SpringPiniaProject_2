@@ -19,15 +19,15 @@ jobs:
           java-version: '21'
       # 환경 설정
       - run: |
-        echo "=========================="
-        echo "환경변수 설정"
-        echo "=========================="
-        rm -f .env
-        touch .env
-        echo "DB_URL=${{secrets.DB_URL}}">> .env
-        echo "DB_USERNAME=${{secrets.DB_USERNAME}}">> .env
-        echo "DB_PASSWORD=${{secrets.DB_PASSWORD}}">> .env
-        echo ".env 저장 완료"
+          echo "=========================="
+          echo "환경변수 설정"
+          echo "=========================="
+          rm -f .env
+          touch .env
+          echo "DB_URL=${{secrets.DB_URL}}">> .env
+          echo "DB_USERNAME=${{secrets.DB_USERNAME}}">> .env
+          echo "DB_PASSWORD=${{secrets.DB_PASSWORD}}">> .env
+          echo ".env 저장 완료"
       # gradlew 권한 부여
       - run: chmod +x gradlew
       # 빌드 ######
