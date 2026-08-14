@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.sist.web.mapper.Foodmapper">
+<mapper namespace="com.sist.web.mapper.FoodMapper">
   <!-- 
        resultType    : 리턴형
        parameterType : 매개변수
@@ -12,7 +12,7 @@
        
    -->
    <!-- 목록 출력 : 페이징 -->
-   <select id="FoodListData" resultType="com.sist.web.vo.FoodVO" parameterType="int">
+   <select id="foodListData" resultType="com.sist.web.vo.FoodVO" parameterType="int">
      SELECT no,name,poster,address
      FROM food
      ORDER BY no ASC

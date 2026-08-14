@@ -38,11 +38,11 @@ public interface FoodMapper {
        * 
        * 
        */
-		public List<FoodVO> FoodListData(int start);
+		public List<FoodVO> foodListData(int start);
 		
 		// 총페이지
 		@Select("SELECT CEIL(COUNT(*)/12.0) FROM food")
-		public int FoodTotalPage();
+		public int foodTotalPage();
 		
 		// 상세보기
 		@Select("SELECT * FROM food WHERE no=#{no}")
