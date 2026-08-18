@@ -15,7 +15,7 @@ public class RouterController {
     	 return "main/main";
      }
      
-     @GetMapping("food/detail")
+     @GetMapping("/food/detail")
      public String food_detail(@RequestParam("no") int no,Model model)
      {
     	 model.addAttribute("no",no);
