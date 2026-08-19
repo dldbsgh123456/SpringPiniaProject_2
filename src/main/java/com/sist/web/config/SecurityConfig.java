@@ -58,6 +58,7 @@ import lombok.RequiredArgsConstructor;
  *         /board => permitAll
  *         /member => permitAll
  */
+
 public class SecurityConfig {
    private final LoginSuccessHandler loginSuccessHandler;
    private final LoginFailHandler  loginFailHandler;
@@ -113,7 +114,7 @@ public class SecurityConfig {
    /*
     *   권한 
     *     => permitAll
-    *     => hasRole('ROLE_ADMIN')
+    *     => hasRole('ROLE_ADMIN') 
     *     
     *   login 
     *   logout 
@@ -121,27 +122,27 @@ public class SecurityConfig {
     *   
     */
    // 인증 관리자 
-//   @Bean
-//   public AuthenticationManager authenticationManager(
-//       HttpSecurity http,
-//       BCryptPasswordEncoder passwordEncoder
-//   ) throws Exception
-//   {
-//	   return null;
-//   }
-//   @Bean
-//   public JdbcUserDetailsManager jdbcUserDetailsSevice()
-//   {
-//	   return null;
-//   }
-//   // 비밀번호 암호화 
-//   @Bean
-//   public BCryptPasswordEncoder passwordEncoder() {
-//	   return new BCryptPasswordEncoder();
-//   }
-//   // PersistentLogins 등록
-//   @Bean
-//   public PersistentTokenRepository persistentTokenRepository() {
-//	   return null;
-//   }
+   @Bean
+   public AuthenticationManager authenticationManager(
+       HttpSecurity http,
+       BCryptPasswordEncoder passwordEncoder
+   ) throws Exception
+   {
+	   return null;
+   }
+   @Bean
+   public JdbcUserDetailsManager jdbcUserDetailsSevice()
+   {
+	   return null;
+   }
+   // 비밀번호 암호화 
+   @Bean
+   public BCryptPasswordEncoder passwordEncoder() {
+	   return new BCryptPasswordEncoder();
+   }
+   // PersistentLogins 등록
+   @Bean
+   public PersistentTokenRepository persistentTokenRepository() {
+	   return null;
+   }
 }
