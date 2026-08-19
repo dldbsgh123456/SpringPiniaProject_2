@@ -36,8 +36,8 @@ jobs:
       - run: docker build -t pinia-app .
       # Docker Hub 연결
       - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
-      # Docker Hub Push
-      - run: docker push pinia-app
+      # Docker Hub Push 푸시 할 땐 이름 붙여야 함 
+      - run: docker push leeyunho1234/pinia-app
       # 기존의 컨테이너 종료
       - run: docker compose down
       # 최신 Docker 실행
