@@ -121,27 +121,27 @@ public class SecurityConfig {
     *   
     */
    // 인증 관리자 
-   @Bean
-   public AuthenticationManager authenticationManager(
-       HttpSecurity http,
-       BCryptPasswordEncoder passwordEncoder
-   ) throws Exception
-   {
-	   return null;
-   }
-   @Bean
-   public JdbcUserDetailsManager jdbcUserDetailsSevice()
-   {
-	   return null;
-   }
-   // 비밀번호 암호화 
-   @Bean
-   public BCryptPasswordEncoder passwordEncoder() {
-	   return new BCryptPasswordEncoder();
-   }
-   // PersistentLogins 등록
-   @Bean
-   public PersistentTokenRepository persistentTokenRepository() {
-	   return null;
-   }
+//   @Bean
+//   public AuthenticationManager authenticationManager(
+//       HttpSecurity http,
+//       BCryptPasswordEncoder passwordEncoder
+//   ) throws Exception
+//   {
+//	   return null;
+//   }
+//   @Bean
+//   public JdbcUserDetailsManager jdbcUserDetailsSevice()
+//   {
+//	   return null;
+//   }
+//   // 비밀번호 암호화 
+//   @Bean
+//   public BCryptPasswordEncoder passwordEncoder() {
+//	   return new BCryptPasswordEncoder();
+//   }
+//   // PersistentLogins 등록
+//   @Bean
+//   public PersistentTokenRepository persistentTokenRepository() {
+//	   return null;
+//   }
 }
