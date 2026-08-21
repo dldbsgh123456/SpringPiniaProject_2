@@ -10,3 +10,4 @@ public class SpringPiniaProject2Application {
 		SpringApplication.run(SpringPiniaProject2Application.class, args);
 	}
 }
+

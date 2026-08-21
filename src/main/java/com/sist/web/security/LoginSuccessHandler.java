@@ -1,5 +1,6 @@
 package com.sist.web.security;
 
+
 import java.io.IOException;
 
 import org.springframework.security.core.Authentication;
@@ -26,10 +27,11 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler{
 		// TODO Auto-generated method stub
 		MemberVO vo=mapper.memberInfoData(authentication.getName());
 		HttpSession session=request.getSession();
-		session.setAttribute("userid",vo.getUserid());
-		session.setAttribute("username",vo.getUsername());
-		session.setAttribute("sex",vo.getSex());
+		session.setAttribute("userid", vo.getUserid());
+		session.setAttribute("username", vo.getUsername());
+		session.setAttribute("sex", vo.getSex());
 		response.sendRedirect("/");
-		
 	}
+
+
 }

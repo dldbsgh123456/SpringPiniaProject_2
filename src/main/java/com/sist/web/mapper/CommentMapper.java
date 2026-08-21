@@ -36,4 +36,15 @@ public interface CommentMapper {
           * 
           */
 	public void commentInsert(CommentVO vo);
+	
+	public void commentDelete(int no);
+	/*
+	 * <update id="commentUpdate" parameterType="com.sist.web.vo.CommentVO">
+	    UPDATE piniaComment SET
+	    msg=#{msg}
+	    WHERE no=#{no}
+	  </update>
+	 * 
+	 */
+	public void commentUpdate(CommentVO vo);
 }

@@ -25,23 +25,28 @@ public class RouterController {
 	   return "main/main";
    }
    @GetMapping("/food/detail_before")
-   public String food_detail_before(@RequestParam("no") int no,HttpServletResponse response,RedirectAttributes ra)
+   public String food_detail_before(
+     @RequestParam("no") int no,
+     HttpServletResponse response,
+     RedirectAttributes ra
+   )
    {
 	   Cookie cookie=new Cookie("food_"+no, String.valueOf(no));
 	   // value => String (문자열만 저장이 가능)
-	   cookie.setPath("/"); // 저장위치
-	   cookie.setMaxAge(60*60*24); // 저장 기간
-	   response.addCookie(cookie); // 브라우저로 전송
-	   // 같은 메소드에서 두 개 처리가 불가능
-	   ra.addAttribute("no",no);
+	   cookie.setPath("/");// 저장위치
+	   cookie.setMaxAge(60*60*24);// 저장 기간 
+	   response.addCookie(cookie);// 브라우저로 전송 
+	   // 같은 메소드에서 두개 처리가 불가능 
+	   ra.addAttribute("no", no);
 	   return "redirect:/food/detail";
    }
    @GetMapping("/food/detail")
    public String food_detail(@RequestParam("no") int no,
 		   Model model)
    {
-       FoodVO vo=fService.foodDetailData(no);
-       model.addAttribute("vo",vo);
+	   
+	   FoodVO vo=fService.foodDetailData(no);
+	   model.addAttribute("vo", vo);
 	   model.addAttribute("main_html", "food/detail");
 	   return "main/main";
    }

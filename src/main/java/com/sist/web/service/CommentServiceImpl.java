@@ -30,4 +30,17 @@ public class CommentServiceImpl implements CommentService{
 		cmapper.commentInsert(vo);
 	}
 
+	@Override
+	public void commentDelete(int no) {
+		// TODO Auto-generated method stub
+		cmapper.commentDelete(no);
+	}
+
+	@Override
+	public void commentUpdate(CommentVO vo) {
+		// TODO Auto-generated method stub
+		cmapper.commentUpdate(vo);
+		
+	}
+
 }
